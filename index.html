@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0f1923">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Daily Briefing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #f8f6f2;
+      --surface:      #ffffff;
+      --border:       #ddd5c8;
+      --border-light: #ece6dd;
+      --text:         #1a1a1a;
+      --text-muted:   #5c5650;
+      --text-meta:    #9a928a;
+      --navy:         #0f1923;
+      --accent:       #c0540a;
+      --accent-dim:   rgba(192,84,10,.12);
+      --green:        #14532d;
+      --green-bg:     #f0fdf4;
+      --green-stripe: #16a34a;
+      --yellow:       #713f12;
+      --yellow-bg:    #fffbeb;
+      --yellow-stripe:#d97706;
+      --std-stripe:   #334155;
+      --font-serif:   'Newsreader', Georgia, 'Times New Roman', serif;
+      --font-sans:    'Source Sans 3', system-ui, -apple-system, sans-serif;
+      --header-h:     68px;
+      --r:            6px;
+      --max-w:        680px;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding-top: var(--header-h);
+      min-height: 100dvh;
+    }
+
+    /* ══ HEADER ══════════════════════════════════════════════════════ */
+    #site-header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--header-h);
+      background: var(--navy);
+      z-index: 200;
+      border-bottom: 3px solid var(--accent);
+      /* safe area for iPhone notch */
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
+    }
+
+    .header-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .masthead { display: flex; flex-direction: column; gap: 1px; }
+
+    .masthead-eyebrow {
+      font-family: var(--font-sans);
+      font-size: 0.575rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .masthead-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 700;
+      font-style: italic;
+      color: #f8f6f2;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+    }
+
+    .header-right { text-align: right; flex-shrink: 0; }
+
+    #header-date {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: rgba(248,246,242,.75);
+      line-height: 1.2;
+    }
+
+    #header-updated {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      color: rgba(248,246,242,.4);
+      line-height: 1.2;
+      margin-top: 2px;
+    }
+
+    /* ══ LAYOUT ══════════════════════════════════════════════════════ */
+    main {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0.5rem 0 4rem;
+    }
+
+    /* ══ SECTION SHELL ═══════════════════════════════════════════════ */
+    .section-wrap {
+      border-bottom: 1px solid var(--border);
+      opacity: 0;
+      transform: translateY(6px);
+      animation: riseIn 0.35s ease forwards;
+    }
+
+    @keyframes riseIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* stagger */
+    .section-wrap:nth-child(1)  { animation-delay: .04s }
+    .section-wrap:nth-child(2)  { animation-delay: .07s }
+    .section-wrap:nth-child(3)  { animation-delay: .10s }
+    .section-wrap:nth-child(4)  { animation-delay: .13s }
+    .section-wrap:nth-child(5)  { animation-delay: .16s }
+    .section-wrap:nth-child(6)  { animation-delay: .19s }
+    .section-wrap:nth-child(7)  { animation-delay: .22s }
+    .section-wrap:nth-child(8)  { animation-delay: .25s }
+    .section-wrap:nth-child(9)  { animation-delay: .28s }
+    .section-wrap:nth-child(10) { animation-delay: .31s }
+    .section-wrap:nth-child(11) { animation-delay: .34s }
+
+    /* ══ SECTION TOGGLE BUTTON ═══════════════════════════════════════ */
+    .section-toggle {
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.8rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      text-align: left;
+      -webkit-tap-highlight-color: transparent;
+      transition: background .15s;
+    }
+
+    .section-toggle:hover  { background: rgba(0,0,0,.025); }
+    .section-toggle:active { background: rgba(0,0,0,.05); }
+
+    .toggle-left {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      min-width: 0;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.25;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .deep-tag {
+      flex-shrink: 0;
+      font-family: var(--font-sans);
+      font-size: 0.525rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #fff;
+      background: var(--navy);
+      border-radius: 2px;
+      padding: 2px 5px;
+    }
+
+    .section-count {
+      flex-shrink: 0;
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      color: var(--text-meta);
+      background: var(--border-light);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1px 7px;
+      white-space: nowrap;
+    }
+
+    .chevron {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      color: var(--text-meta);
+      transition: transform .25s ease;
+    }
+
+    .section-wrap.open .chevron { transform: rotate(180deg); }
+
+    /* ══ ACCORDION BODY ══════════════════════════════════════════════ */
+    .section-body {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.32s ease;
+    }
+
+    /* ══ NEWS ITEMS ══════════════════════════════════════════════════ */
+    .items-list {
+      padding: 0 1rem 0.75rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .news-item {
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .news-item:last-child { border-bottom: none; }
+
+    .item-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.45rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .item-headline {
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+      line-height: 1.35;
+      flex: 1;
+      transition: color .15s;
+    }
+
+    .item-headline:hover { color: var(--accent); }
+
+    .item-source {
+      flex-shrink: 0;
+      font-family: var(--font-sans);
+      font-size: 0.575rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      background: var(--accent-dim);
+      border-radius: 3px;
+      padding: 2px 5px;
+      margin-top: 3px;
+      white-space: nowrap;
+    }
+
+    .item-summary {
+      font-family: var(--font-sans);
+      font-size: 0.825rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* ══ WEATHER CARD ════════════════════════════════════════════════ */
+    .weather-inner {
+      margin: 0 1rem 0.875rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 0.875rem 1rem;
+    }
+
+    .weather-top {
+      display: flex;
+      align-items: center;
+      gap: 0.875rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .w-icon { font-size: 2.25rem; line-height: 1; flex-shrink: 0; }
+
+    .w-center { flex: 1; }
+
+    .w-temp {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    .w-cond {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .w-hilo { text-align: right; }
+
+    .w-hilo-line {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .w-hilo-line strong { color: var(--text); font-weight: 600; }
+
+    .w-loc {
+      font-size: 0.65rem;
+      color: var(--text-meta);
+      margin-top: 2px;
+    }
+
+    .w-forecast {
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      border-top: 1px solid var(--border-light);
+      padding-top: 0.65rem;
+    }
+
+    /* ══ MLB PICKS ═══════════════════════════════════════════════════ */
+    .mlb-list {
+      padding: 0 1rem 0.875rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .pick-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--std-stripe);
+      border-radius: var(--r);
+      padding: 0.65rem 0.75rem;
+    }
+
+    .pick-card.HIGH    { border-left-color: var(--green-stripe); background: var(--green-bg); }
+    .pick-card.LOW     { border-left-color: var(--yellow-stripe); background: var(--yellow-bg); }
+    .pick-card.STANDARD { border-left-color: var(--std-stripe); }
+
+    .pick-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .pick-matchup {
+      font-family: var(--font-serif);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .pick-time {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      color: var(--text-meta);
+      flex-shrink: 0;
+    }
+
+    .pick-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .pick-label {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .pbadge {
+      font-family: var(--font-sans);
+      font-size: 0.625rem;
+      font-weight: 600;
+      border-radius: 3px;
+      padding: 2px 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .pbadge.model { background: rgba(15,25,35,.08); color: var(--navy); }
+    .pbadge.line  { background: var(--accent-dim);  color: var(--accent); }
+    .pbadge.edge  { background: rgba(15,25,35,.05); color: var(--text-muted); }
+
+    .pick-tier {
+      font-family: var(--font-sans);
+      font-size: 0.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-left: auto;
+    }
+
+    .HIGH  .pick-tier { color: var(--green); }
+    .LOW   .pick-tier { color: var(--yellow); }
+    .STANDARD .pick-tier { color: var(--text-meta); }
+
+    /* ══ STATES ══════════════════════════════════════════════════════ */
+    .state-loading {
+      text-align: center;
+      padding: 5rem 1rem 2rem;
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    .state-error {
+      margin: 2rem 1rem;
+      padding: 1.25rem;
+      background: #fff5f5;
+      border: 1px solid #fca5a5;
+      border-radius: var(--r);
+      font-size: 0.875rem;
+      color: #b91c1c;
+      line-height: 1.5;
+    }
+
+    /* ══ RESPONSIVE ══════════════════════════════════════════════════ */
+    @media (max-width: 420px) {
+      .masthead-title { font-size: 1.3rem; }
+      #header-date    { font-size: 0.7rem; }
+    }
+
+    @media (min-width: 681px) {
+      main { border-left: 1px solid var(--border); border-right: 1px solid var(--border); }
+    }
+  </style>
+</head>
+<body>
+
+<header id="site-header">
+  <div class="header-inner">
+    <div class="masthead">
+      <span class="masthead-eyebrow">Morning Edition</span>
+      <span class="masthead-title">Daily Briefing</span>
+    </div>
+    <div class="header-right">
+      <span id="header-date">—</span>
+      <span id="header-updated">—</span>
+    </div>
+  </div>
+</header>
+
+<main id="content">
+  <div class="state-loading">Loading your briefing…</div>
+</main>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ── Helpers ─────────────────────────────────────────────────────── */
+
+  function chevron() {
+    return `<svg class="chevron" viewBox="0 0 18 18" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="4 7 9 12 14 7"/>
+    </svg>`;
+  }
+
+  function escHtml(s) {
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  /* ── Accordion wiring ────────────────────────────────────────────── */
+
+  function wireAccordion(wrap) {
+    const btn  = wrap.querySelector('.section-toggle');
+    const body = wrap.querySelector('.section-body');
+    if (!btn || !body) return;
+
+    btn.addEventListener('click', () => {
+      const opening = !wrap.classList.contains('open');
+
+      if (opening) {
+        wrap.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        body.style.maxHeight = body.scrollHeight + 'px';
+        // Once fully open, remove fixed max-height so dynamic content isn't clipped
+        body.addEventListener('transitionend', () => {
+          if (wrap.classList.contains('open')) body.style.maxHeight = 'none';
+        }, { once: true });
+      } else {
+        // Freeze at current scrollHeight first, then animate to 0
+        body.style.maxHeight = body.scrollHeight + 'px';
+        wrap.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          body.style.maxHeight = '0';
+        }));
+      }
+    });
+  }
+
+  /* ── Section builder ─────────────────────────────────────────────── */
+
+  function buildSection(id, title, bodyHtml, opts = {}) {
+    const { deepDive = false, countLabel = '' } = opts;
+
+    const wrap = document.createElement('div');
+    wrap.className = 'section-wrap';
+    wrap.id = 'sec-' + id;
+
+    const ddTag  = deepDive ? `<span class="deep-tag">Deep Dive</span>` : '';
+    const cntTag = countLabel ? `<span class="section-count">${escHtml(countLabel)}</span>` : '';
+
+    wrap.innerHTML = `
+      <button class="section-toggle" aria-expanded="false" aria-controls="body-${id}">
+        <span class="toggle-left">
+          <span class="section-title">${escHtml(title)}</span>
+          ${ddTag}
+          ${cntTag}
+        </span>
+        ${chevron()}
+      </button>
+      <div class="section-body" id="body-${id}" role="region">
+        ${bodyHtml}
+      </div>`;
+
+    wireAccordion(wrap);
+    return wrap;
+  }
+
+  /* ── News items ──────────────────────────────────────────────────── */
+
+  function renderItems(items) {
+    const rows = items.map(it => {
+      const href    = it.url && it.url !== '#' ? ` href="${escHtml(it.url)}"` : '';
+      const target  = href ? ' target="_blank" rel="noopener noreferrer"' : '';
+      const srcTag  = it.source ? `<span class="item-source">${escHtml(it.source)}</span>` : '';
+      return `
+        <div class="news-item">
+          <div class="item-header">
+            <a class="item-headline"${href}${target}>${escHtml(it.headline)}</a>
+            ${srcTag}
+          </div>
+          <p class="item-summary">${escHtml(it.summary)}</p>
+        </div>`;
+    }).join('');
+
+    return `<div class="items-list">${rows}</div>`;
+  }
+
+  /* ── Weather ─────────────────────────────────────────────────────── */
+
+  function renderWeather(w) {
+    const body = `
+      <div class="weather-inner">
+        <div class="weather-top">
+          <span class="w-icon">${escHtml(w.icon || '🌤')}</span>
+          <div class="w-center">
+            <div class="w-temp">${escHtml(w.current)}</div>
+            <div class="w-cond">${escHtml(w.conditions)}</div>
+          </div>
+          <div class="w-hilo">
+            <div class="w-hilo-line"><strong>↑ ${w.high}°F</strong></div>
+            <div class="w-hilo-line"><strong>↓ ${w.low}°F</strong></div>
+            <div class="w-loc">Milledgeville, GA</div>
+          </div>
+        </div>
+        <p class="w-forecast">${escHtml(w.forecast)}</p>
+      </div>`;
+
+    return buildSection('weather', '🌤 Weather', body, { countLabel: 'Milledgeville · 30622' });
+  }
+
+  /* ── MLB picks ───────────────────────────────────────────────────── */
+
+  function renderMLB(picks) {
+    const cards = picks.map(p => {
+      const tier = p.confidence || 'STANDARD';
+      return `
+        <div class="pick-card ${escHtml(tier)}">
+          <div class="pick-top">
+            <span class="pick-matchup">${escHtml(p.away)} @ ${escHtml(p.home)}</span>
+            <span class="pick-time">${escHtml(p.time)}</span>
+          </div>
+          <div class="pick-row">
+            <span class="pick-label">▶ ${escHtml(p.pick)}</span>
+            <span class="pbadge model">${p.model_pct}% model</span>
+            <span class="pbadge line">${escHtml(p.vegas_line)}</span>
+            <span class="pbadge edge">+${p.edge}% edge</span>
+            <span class="pick-tier">${escHtml(tier)}</span>
+          </div>
+        </div>`;
+    }).join('');
+
+    return buildSection('mlb', '⚾ MLB Value Picks',
+      `<div class="mlb-list">${cards}</div>`,
+      { countLabel: picks.length + ' games' });
+  }
+
+  /* ── Section metadata ────────────────────────────────────────────── */
+
+  const SECTION_META = {
+    'us-news':          { icon: '🇺🇸', deepDive: false },
+    'international':    { icon: '🌎', deepDive: false },
+    'political':        { icon: '🏛',  deepDive: false },
+    'economic':         { icon: '📈', deepDive: false },
+    'ai-news':          { icon: '🤖', deepDive: true  },
+    'tax-news':         { icon: '🧾', deepDive: true  },
+    'georgia-assembly': { icon: '🍑', deepDive: false },
+    'georgia-bulldogs': { icon: '🐾', deepDive: false },
+    'entertainment':    { icon: '🎬', deepDive: false },
+  };
+
+  /* ── Main init ───────────────────────────────────────────────────── */
+
+  async function init() {
+    const main = document.getElementById('content');
+
+    try {
+      const resp = await fetch('data.json' + '?v=' + Date.now());
+      if (!resp.ok) throw new Error('HTTP ' + resp.status + ' — could not load data.json');
+      const data = await resp.json();
+
+      /* Header */
+      document.getElementById('header-date').textContent    = data.date || '';
+      document.getElementById('header-updated').textContent = data.updated_at ? 'Updated ' + data.updated_at : '';
+
+      const frag = document.createDocumentFragment();
+
+      /* News sections */
+      for (const sec of (data.sections || [])) {
+        const meta  = SECTION_META[sec.id] || {};
+        const title = (meta.icon ? meta.icon + '\u00A0' : '') + sec.title;
+        const body  = renderItems(sec.items || []);
+        const cnt   = (sec.items || []).length;
+        const wrap  = buildSection(sec.id, title, body, {
+          deepDive:   meta.deepDive || false,
+          countLabel: cnt + (cnt === 1 ? ' item' : ' items'),
+        });
+        frag.appendChild(wrap);
+      }
+
+      /* Weather */
+      if (data.weather) frag.appendChild(renderWeather(data.weather));
+
+      /* MLB */
+      if (data.mlb_picks && data.mlb_picks.length) frag.appendChild(renderMLB(data.mlb_picks));
+
+      main.innerHTML = '';
+      main.appendChild(frag);
+
+    } catch (err) {
+      main.innerHTML = `<div class="state-error">
+        <strong>Could not load briefing data.</strong><br>
+        ${escHtml(err.message)}
+      </div>`;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', init);
+})();
+</script>
+
+</body>
+</html>

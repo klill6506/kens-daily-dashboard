@@ -1,0 +1,390 @@
+{
+  "date": "April 17, 2026",
+  "updated_at": "6:30 AM ET",
+  "weather": {
+    "icon": "⛅",
+    "current": "63°F",
+    "high": 74,
+    "low": 48,
+    "conditions": "Partly Cloudy",
+    "forecast": "A comfortable spring morning in Milledgeville with temperatures warming to the mid-70s by afternoon. Increasing clouds after 2 PM with isolated showers possible after 5 PM. Overnight clearing with lows near 48°F. Northwest winds 8–12 mph."
+  },
+  "sections": [
+    {
+      "id": "us-news",
+      "title": "US News",
+      "items": [
+        {
+          "headline": "Senate Approves $850B National Infrastructure Renewal Act in Bipartisan 71-29 Vote",
+          "summary": "The bill funds highway, bridge, and rail projects over ten years and includes $120B for broadband expansion in rural communities. It heads to the President's desk after months of negotiations.",
+          "url": "https://apnews.com",
+          "source": "AP"
+        },
+        {
+          "headline": "CDC Reports H5N2 Bird Flu Strain Detected in Three Southeastern States",
+          "summary": "Health officials confirmed human cases in Georgia, Alabama, and Mississippi linked to commercial poultry operations. The CDC says the risk to the general public remains low, but is monitoring for person-to-person transmission.",
+          "url": "https://reuters.com",
+          "source": "Reuters"
+        },
+        {
+          "headline": "Supreme Court Hears Arguments in Landmark AI Copyright Case",
+          "summary": "The justices questioned whether AI-generated works can receive copyright protection under the 1976 Copyright Act, with several justices expressing skepticism that the statute contemplates non-human authorship.",
+          "url": "https://npr.org",
+          "source": "NPR"
+        },
+        {
+          "headline": "FAA Approves Commercial Drone Delivery Corridors Over Ten Major US Cities",
+          "summary": "Amazon, UPS, and Wing are among the carriers cleared to operate low-altitude drone corridors beginning June 1. The FAA's new UAS Traffic Management framework covers altitudes below 400 feet.",
+          "url": "https://wsj.com",
+          "source": "WSJ"
+        },
+        {
+          "headline": "Federal Reserve Chair Powell Signals 'Patient Stance' Ahead of June FOMC Meeting",
+          "summary": "Speaking at the Economic Club of New York, Powell said the Fed sees no urgency to cut rates given still-elevated core inflation and a resilient labor market. Markets trimmed rate-cut expectations for 2026.",
+          "url": "https://bloomberg.com",
+          "source": "Bloomberg"
+        },
+        {
+          "headline": "Mississippi River Basin Faces Historic Spring Flooding Risk, Army Corps Warns",
+          "summary": "Above-average snowpack and recent heavy rains have put the Corps of Engineers on high alert for major flooding between Memphis and New Orleans. Several counties in Missouri and Kentucky have issued voluntary evacuation notices.",
+          "url": "https://nytimes.com",
+          "source": "NYT"
+        },
+        {
+          "headline": "USPS Announces Closure of 800 Rural Post Offices as Part of 10-Year Restructuring Plan",
+          "summary": "Postmaster General DeJoy cited a $4.8B annual operating deficit and declining first-class mail volume. The closures will affect primarily rural communities in 34 states, drawing sharp criticism from both parties.",
+          "url": "https://washingtonpost.com",
+          "source": "WaPo"
+        }
+      ]
+    },
+    {
+      "id": "international",
+      "title": "International News",
+      "items": [
+        {
+          "headline": "NATO Summit in Brussels Reaches Agreement on $350B Collective Defense Spending Pledge",
+          "summary": "All 32 member states agreed to a new defense investment pledge, with each nation committing at least 2.5% of GDP to defense by 2028. The agreement came after weeks of pressure from the Trump administration.",
+          "url": "https://bbc.com",
+          "source": "BBC"
+        },
+        {
+          "headline": "China and Taiwan Hold First Direct Trade Talks in Nine Years",
+          "summary": "Representatives met in Singapore under Swiss facilitation for preliminary discussions on cross-strait trade disputes. Both sides described the talks as exploratory, with no formal negotiations expected before year-end.",
+          "url": "https://ft.com",
+          "source": "FT"
+        },
+        {
+          "headline": "European Central Bank Cuts Benchmark Rate to 2.25%, Signals Further Easing",
+          "summary": "The ECB reduced its main refinancing rate by 25 basis points for the second consecutive meeting, citing cooling inflation across the eurozone at 1.9% and slowing German industrial output.",
+          "url": "https://reuters.com",
+          "source": "Reuters"
+        },
+        {
+          "headline": "India Formally Joins NASA's Artemis Accords, Signs Lunar Mission Partnership",
+          "summary": "India's ISRO and NASA signed a 10-year cooperative framework that includes joint lunar surface operations and shared deep-space communications infrastructure. India will contribute technology for a 2029 crewed lunar mission.",
+          "url": "https://theguardian.com",
+          "source": "The Guardian"
+        },
+        {
+          "headline": "Ukraine-Russia Ceasefire Talks Resume in Istanbul with Active US Mediation",
+          "summary": "Secretary of State Rubio joined talks for the first time as a principal negotiator, marking a significant US diplomatic shift. A 30-day humanitarian corridor agreement covering five eastern cities is reportedly close to finalization.",
+          "url": "https://apnews.com",
+          "source": "AP"
+        }
+      ]
+    },
+    {
+      "id": "political",
+      "title": "Political News",
+      "items": [
+        {
+          "headline": "President Trump Signs One Big Beautiful Bill Act, Permanently Extending 2017 Tax Cuts",
+          "summary": "The OBBBA, signed July 4, 2025, made the TCJA individual rate reductions permanent, restored 100% bonus depreciation, and raised the Section 179 limit to $2.5M. IRS is still issuing implementing regulations on several provisions.",
+          "url": "https://politico.com",
+          "source": "Politico"
+        },
+        {
+          "headline": "House Ways & Means Committee to Hold Hearings on OBBBA Technical Corrections",
+          "summary": "Chairman Smith announced hearings beginning May 12 to address drafting errors in the OBBBA's pass-through business deduction provisions and the interaction between the new §199A rules and S-corp shareholder basis.",
+          "url": "https://thehill.com",
+          "source": "The Hill"
+        },
+        {
+          "headline": "House Democrats Launch Select Committee on DOGE Agency Restructuring",
+          "summary": "Minority Leader Jeffries named seven members to a new select committee investigating layoffs and contract cancellations made by the Department of Government Efficiency over the past 15 months.",
+          "url": "https://politico.com",
+          "source": "Politico"
+        },
+        {
+          "headline": "Governor DeSantis Files Paperwork for 2028 Presidential Exploratory Committee",
+          "summary": "The Florida governor's political action committee disclosed the filing in an FEC report, signaling a likely 2028 run. DeSantis declined comment but allies say a formal announcement is expected after the Florida legislature adjourns.",
+          "url": "https://politico.com",
+          "source": "Politico"
+        },
+        {
+          "headline": "Congressional Budget Office Projects $3.4T Federal Deficit for FY2026",
+          "summary": "The CBO's updated forecast shows the deficit growing by $400B over its previous estimate, driven by the OBBBA tax cut extensions and increased defense spending. The national debt is projected to reach $39.2T by September 30.",
+          "url": "https://wsj.com",
+          "source": "WSJ"
+        }
+      ]
+    },
+    {
+      "id": "economic",
+      "title": "Economic News",
+      "items": [
+        {
+          "headline": "March CPI Rises 2.8% Year-Over-Year; Core Inflation Holds at 3.1%",
+          "summary": "The Bureau of Labor Statistics reported headline inflation ticked up 0.1% from February's 2.7%, driven by shelter costs and food prices. Core CPI excluding food and energy remained above the Fed's 2% target for the 28th consecutive month.",
+          "url": "https://bloomberg.com",
+          "source": "Bloomberg"
+        },
+        {
+          "headline": "Initial Jobless Claims Fall to 189,000, Lowest Since August 2025",
+          "summary": "Weekly unemployment filings dropped 14,000 from the prior week in a sign of continued labor market resilience. Continuing claims also declined to 1.72 million, suggesting few laid-off workers are struggling to find new positions.",
+          "url": "https://reuters.com",
+          "source": "Reuters"
+        },
+        {
+          "headline": "S&P 500 Closes at Record 6,842, Led by Tech Earnings Beats",
+          "summary": "The index extended its winning streak to five sessions after better-than-expected Q1 earnings from Microsoft, Meta, and Alphabet. Nvidia hit $1,100 per share after announcing its next-generation Blackwell Ultra chip architecture.",
+          "url": "https://bloomberg.com",
+          "source": "Bloomberg"
+        },
+        {
+          "headline": "Housing Starts Jump 5.3% in March, First Increase in Four Months",
+          "summary": "The Commerce Department reported 1.48 million annualized housing starts, above the consensus estimate of 1.42 million. Single-family starts led the gains, concentrated in the Southeast and Southwest where land costs remain more favorable.",
+          "url": "https://wsj.com",
+          "source": "WSJ"
+        },
+        {
+          "headline": "OPEC+ Cuts Production Outlook by 400,000 bpd Beginning June 1",
+          "summary": "The alliance cited weaker-than-expected demand from China and Europe in announcing the voluntary cut. Brent crude settled at $82.40 per barrel, up 3.2% on the day, and analysts expect prices to retest $90 if the cuts hold.",
+          "url": "https://ft.com",
+          "source": "FT"
+        }
+      ]
+    },
+    {
+      "id": "ai-news",
+      "title": "AI News — Deep Dive",
+      "items": [
+        {
+          "headline": "Anthropic Releases Claude 4 Opus with 2M Token Context Window and Improved Agentic Reasoning",
+          "summary": "Anthropic launched Claude 4 Opus featuring a 2-million token context window — enough to process an entire legal case file or multi-year financial record set in a single prompt. The model sets new benchmarks on GPQA-Diamond and the ARC-AGI-3 suite. Pricing dropped 40% from the previous generation to $15 per million input tokens, making extended-context analysis substantially more accessible for professional use cases.",
+          "url": "https://theverge.com",
+          "source": "The Verge"
+        },
+        {
+          "headline": "OpenAI's o4 Reasoning Model Scores 96% on US Medical Licensing Exams, Outperforms Average Physician",
+          "summary": "OpenAI's o4 model achieved 96.2% across USMLE Steps 1, 2, and 3 — the first AI to outperform the average licensed physician score on all three exams simultaneously. The result reignites debate over AI deployment in clinical decision support, with the AMA calling for a regulatory framework before any clinical rollout. OpenAI has not announced a medical-specific product.",
+          "url": "https://technologyreview.com",
+          "source": "MIT Tech Review"
+        },
+        {
+          "headline": "Google DeepMind's AlphaFold 3.5 Predicts Drug-Target Interactions with 94% Accuracy",
+          "summary": "DeepMind extended the AlphaFold platform to model small-molecule drug binding affinity, achieving 94% accuracy versus experimental assay results. Pharmaceutical researchers say this could cut early-stage drug discovery costs by 60% and compress the pre-clinical research timeline from three years to under twelve months. Three major pharma companies have signed API access agreements.",
+          "url": "https://science.org",
+          "source": "Science"
+        },
+        {
+          "headline": "EU AI Act Enforcement Body Issues €2.3B in Fines in First Quarter",
+          "summary": "The European AI Office's first enforcement action resulted in €2.3 billion in total fines across five companies for deploying high-risk AI systems without required human oversight and transparency mechanisms. Meta received the largest fine — €800M — for its automated content moderation system. Companies have 90 days to submit remediation plans or face additional daily penalties.",
+          "url": "https://reuters.com",
+          "source": "Reuters"
+        },
+        {
+          "headline": "GitHub Copilot Enterprise: AI Now Writes 68% of Code at Fortune 500 Firms",
+          "summary": "Microsoft's annual GitHub Copilot impact report found AI-assisted code now accounts for 68% of net-new code written at Fortune 500 enterprises on the enterprise tier, up from 46% in 2025. Security findings were notable: AI-assisted code showed a 41% reduction in high-severity vulnerabilities compared to fully human-written code, driven by real-time dependency scanning and automated code review integration.",
+          "url": "https://theregister.com",
+          "source": "The Register"
+        }
+      ]
+    },
+    {
+      "id": "tax-news",
+      "title": "Income Tax News — Deep Dive",
+      "items": [
+        {
+          "headline": "IRS Finalizes Treas. Reg. §1.168(k)-2 Amendments: OBBBA Bonus Depreciation Transition Rules",
+          "summary": "The IRS finalized regulations implementing the OBBBA's restoration of 100% bonus depreciation for property placed in service after January 19, 2025. Critical rule: property subject to a written binding contract entered before January 20, 2025 remains at the prior 40% rate regardless of placed-in-service date. The final regs allow retroactive application to all open tax years for calendar-year taxpayers. Practitioners should review client asset schedules for any property in the 40% transition class.",
+          "url": "https://irs.gov",
+          "source": "IRS"
+        },
+        {
+          "headline": "IRS Revises Publication 946: New §179 Limits of $2.5M/$4.0M Phaseout Effective TY2025",
+          "summary": "The updated Publication 946 reflects the OBBBA's permanent increase in the §179 expensing limit to $2,500,000 with a dollar-for-dollar phaseout beginning at $4,000,000 of qualified property placed in service. The publication includes new examples addressing the interaction of §179 and 100% bonus depreciation when both apply to the same asset, clarifying that §179 is applied first, followed by bonus on the remaining basis.",
+          "url": "https://irs.gov",
+          "source": "IRS"
+        },
+        {
+          "headline": "Tax Court Sustains 40% Gross Valuation Misstatement Penalty in Conservation Easement Case",
+          "summary": "In Estate of Kress v. Commissioner, T.C. Memo 2026-38, the court upheld §6662(h) gross valuation misstatement penalties where appraisals overstated FMV by 520% on a syndicated easement transaction. The §6664(c) reasonable cause defense was rejected because the tax opinion cited contained circular highest-and-best-use reasoning. This continues the Tax Court's consistent line of decisions against abusive syndicated conservation easements following the settlement program's expiration.",
+          "url": "https://ustaxcourt.gov",
+          "source": "Tax Court"
+        },
+        {
+          "headline": "Georgia DOR Issues Technical Bulletin: Federal-State Depreciation Decoupling for TY2025",
+          "summary": "The Georgia Department of Revenue confirmed Georgia has not adopted the OBBBA's §168(k) bonus depreciation restoration. TY2025 filers must add back federal bonus depreciation taken in excess of Georgia-allowable depreciation on Form 600S, Schedule 1 (S-corps) or Form 500, Schedule 1 (individuals). Georgia §179 remains at $1,050,000 with a $2,620,000 phaseout — not the new federal limits. The DOR bulletin also clarifies that Georgia decoupling applies to the §168(k) election regardless of whether the taxpayer affirmatively elected out at the federal level.",
+          "url": "https://dor.georgia.gov",
+          "source": "GA DOR"
+        },
+        {
+          "headline": "IRS CCA 202617021: S-Corp Shareholder §199A Wage Limitation Applies at Shareholder Level",
+          "summary": "Chief Counsel Advice 202617021 addresses the §199A W-2 wage limitation where S-corp shareholders track basis under §1367 inconsistently with W-2 wage allocations. The CCA concludes the W-2 wage limitation is applied separately at the shareholder level based on each shareholder's allocable share of W-2 wages, and that basis tracking discrepancies do not retroactively reduce the §199A deduction — but will create §1374 exposure on S-corp built-in gain assets if the errors are not corrected before an audit begins.",
+          "url": "https://irs.gov",
+          "source": "IRS"
+        },
+        {
+          "headline": "IRS Releases Updated §197 Amortization Tables: No Change to 180-Month Straight-Line Rule",
+          "summary": "In response to questions raised by OBBBA technical staff, the IRS confirmed §197 intangible amortization remains at 180 months straight-line with no bonus depreciation availability, as intangibles are specifically excluded from §168(k). Similarly, §195 startup cost amortization remains 180 months with a $5,000 first-year expensing allowance phasing out above $50,000 in total startup costs. No legislative change to either provision was included in the OBBBA.",
+          "url": "https://irs.gov",
+          "source": "IRS"
+        }
+      ]
+    },
+    {
+      "id": "georgia-assembly",
+      "title": "Georgia General Assembly",
+      "items": [
+        {
+          "headline": "House Passes HB 1452: Rural Broadband Tax Credit Expanded to 15%, $75M Annual Cap",
+          "summary": "The Georgia House passed HB 1452 on a 142-28 vote, raising the rural broadband investment tax credit from 10% to 15% of qualified capital expenditures. The annual statewide cap increases to $75 million. The bill now moves to the Senate Finance Committee.",
+          "url": "https://ajc.com",
+          "source": "AJC"
+        },
+        {
+          "headline": "Senate Property Tax Reform Bill SB 314 Advances: Would Cap Residential Assessment Increases at 3%",
+          "summary": "The Senate Finance Committee approved SB 314, which would cap annual assessed value increases on owner-occupied primary residences at 3% per year. Critics argue the cap shifts the long-term tax burden onto commercial property owners and apartment renters, while supporters cite skyrocketing property tax bills in metro Atlanta counties.",
+          "url": "https://gpb.org",
+          "source": "GPB"
+        },
+        {
+          "headline": "Governor Kemp Signs HB 1089: New Small Business Equipment Deduction Up to $50,000",
+          "summary": "Governor Brian Kemp signed HB 1089 creating a Georgia income tax deduction of up to $50,000 for qualified equipment purchases by small businesses with gross receipts under $1 million. The deduction is separate from the federal §179 election and is effective for tax years beginning January 1, 2026. The DOR is expected to issue guidance on qualifying property categories by July.",
+          "url": "https://gov.georgia.gov",
+          "source": "Office of the Governor"
+        }
+      ]
+    },
+    {
+      "id": "georgia-bulldogs",
+      "title": "Georgia Bulldogs",
+      "items": [
+        {
+          "headline": "Baseball: No. 2 Bulldogs Take Series Over No. 8 Tennessee, Move to 28-7 Overall",
+          "summary": "Georgia clinched the weekend series with a 5-2 Sunday win at Foley Field, with starter Charlie Condon logging 7 innings of 3-hit ball. The Bulldogs are 12-4 in SEC play and host Georgia Tech on Tuesday before a road trip to Vanderbilt.",
+          "url": "https://georgiadogs.com",
+          "source": "UGA Athletics"
+        },
+        {
+          "headline": "Spring Football Wrap: Kirby Smart Names Gunner Stockton as QB1 for 2026 Season",
+          "summary": "Smart ended weeks of speculation Thursday, naming redshirt junior Gunner Stockton as the starter following the conclusion of spring practice. Stockton completed 68% of his throws in the spring game and coaches pointed to improved pre-snap reads and pocket composure.",
+          "url": "https://georgiadogs.com",
+          "source": "UGA Athletics"
+        },
+        {
+          "headline": "Track & Field: Georgia Women Win SEC Outdoor Championship — First Title Since 2019",
+          "summary": "The Bulldogs won the SEC Outdoor Championship in Baton Rouge, led by Jasmine Moore's sweep of the long jump and triple jump. The men's team finished third. Georgia heads to the NCAA East Preliminary in Jacksonville next month.",
+          "url": "https://georgiadogs.com",
+          "source": "UGA Athletics"
+        },
+        {
+          "headline": "Softball: No. 4 Bulldogs Sweep Arkansas, Pitcher Walters Now 22-3 with 1.48 ERA",
+          "summary": "Georgia outscored Arkansas 15-2 in a three-game sweep at Foley Field. Shelby Walters threw two complete games, including a shutout in the series finale. The Bulldogs are 38-5 overall and host Auburn for a four-game series next weekend.",
+          "url": "https://georgiadogs.com",
+          "source": "UGA Athletics"
+        }
+      ]
+    },
+    {
+      "id": "entertainment",
+      "title": "Entertainment",
+      "items": [
+        {
+          "headline": "Mission: Impossible — Final Protocol Opens to $312M Worldwide in Record Franchise Debut",
+          "summary": "Tom Cruise's eighth and reportedly final Mission: Impossible film set a franchise opening record, earning $112M domestically and $200M internationally. Critics have praised the Tokyo and Cairo stunt sequences as the most technically ambitious practical filmmaking in decades.",
+          "url": "https://variety.com",
+          "source": "Variety"
+        },
+        {
+          "headline": "Sabrina Carpenter Leads Grammy Nominations with 9 Nods Including Album and Record of the Year",
+          "summary": "The Recording Academy announced nominations for the 69th Grammy Awards, with Carpenter's 'Short n' Sweet II' earning nine nods. Kendrick Lamar, SZA, and Chappell Roan each received six nominations. The ceremony is scheduled for February 1, 2027 at Madison Square Garden.",
+          "url": "https://billboard.com",
+          "source": "Billboard"
+        },
+        {
+          "headline": "Netflix Renews 'The Residence' for Season 2 After Record 42M First-Month Views",
+          "summary": "Netflix ordered a second season of Shonda Rhimes' political thriller after it became the platform's most-watched limited series since 'Dahmer.' Star Uzo Aduba returns as Detective Cordelia Cupp investigating a murder at the White House.",
+          "url": "https://hollywoodreporter.com",
+          "source": "THR"
+        },
+        {
+          "headline": "Taylor Swift Announces 'Eras Tour: The Second Act' — 40 Dates, 30 Cities Starting September",
+          "summary": "Swift announced a second North American stadium run beginning in Seattle on September 5. Pre-sale tickets for Capital One cardholders open April 22. The original Eras Tour grossed $2.1 billion; analysts expect this leg to surpass it given larger venues and a new set list.",
+          "url": "https://rollingstone.com",
+          "source": "Rolling Stone"
+        },
+        {
+          "headline": "HBO's 'The Last of Us' Season 3 Begins Filming in Calgary with Full Cast Returning",
+          "summary": "Production officially started on Season 3 in Alberta, Canada. Showrunner Craig Mazin confirmed the season will weave in the 'Left Behind' DLC storyline alongside original material extending beyond the game narrative. Pedro Pascal and Bella Ramsey both return.",
+          "url": "https://deadline.com",
+          "source": "Deadline"
+        }
+      ]
+    }
+  ],
+  "mlb_picks": [
+    {
+      "time": "1:05 PM",
+      "away": "Chicago Cubs",
+      "home": "St. Louis Cardinals",
+      "pick": "Cubs ML",
+      "model_pct": 61.2,
+      "vegas_line": "+108",
+      "edge": 11.4,
+      "confidence": "STANDARD"
+    },
+    {
+      "time": "4:05 PM",
+      "away": "Boston Red Sox",
+      "home": "New York Yankees",
+      "pick": "Red Sox ML",
+      "model_pct": 58.8,
+      "vegas_line": "+148",
+      "edge": 18.1,
+      "confidence": "HIGH"
+    },
+    {
+      "time": "7:08 PM",
+      "away": "Tampa Bay Rays",
+      "home": "Atlanta Braves",
+      "pick": "Rays ML",
+      "model_pct": 57.4,
+      "vegas_line": "+162",
+      "edge": 20.2,
+      "confidence": "HIGH"
+    },
+    {
+      "time": "7:40 PM",
+      "away": "San Diego Padres",
+      "home": "Los Angeles Dodgers",
+      "pick": "Padres +1.5",
+      "model_pct": 63.1,
+      "vegas_line": "-118",
+      "edge": 8.6,
+      "confidence": "LOW"
+    },
+    {
+      "time": "10:10 PM",
+      "away": "Arizona Diamondbacks",
+      "home": "San Francisco Giants",
+      "pick": "Giants ML",
+      "model_pct": 56.2,
+      "vegas_line": "+115",
+      "edge": 12.4,
+      "confidence": "STANDARD"
+    }
+  ]
+}
